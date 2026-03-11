@@ -7,10 +7,10 @@ import { Header } from "./features/layout/components/Header";
 import { Content } from "./features/layout/components/Content";
 import { Footer } from "./features/layout/components/Footer";
 //Componentes Auth
-import Account from "./features/auth/components/Account";
-import { Favorites } from "./features/auth/components/Favorites";
-import { Purchases }  from "./features/auth/components/Purchases";
-import { Cart } from "./features/auth/components/Cart";
+import { Account } from "./features/auth/components/Account";
+import { Favorites } from "./features/auth/components/Favorites"; // coincide con Favorites.jsx
+import { Purchases }  from "./features/auth/components/Purchases"; // coincide con Purchases.jsx
+import { Cart } from "./features/auth/components/Cart"; // coincide con Cart.jsx
 
 //Componentes de view
 import {Article} from "./features/view/components/Article";
