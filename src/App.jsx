@@ -7,7 +7,7 @@ import { Header } from "./features/layout/components/Header";
 import { Content } from "./features/layout/components/Content";
 import { Footer } from "./features/layout/components/Footer";
 //Componentes Auth
-import { Account } from "./features/auth/components/account";
+import Account from "./features/auth/components/Account";
 import { Favorites } from "./features/auth/components/Favorites";
 import { Purchases }  from "./features/auth/components/Purchases";
 import { Cart } from "./features/auth/components/Cart";
