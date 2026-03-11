@@ -1,18 +1,62 @@
-# React + Vite
+# Glow by Bloom
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
+Glow by Bloom es una aplicación web de tienda de maquillaje donde los usuarios pueden visualizar productos, agregarlos al carrito y guardarlos en favoritos.
 
-Currently, two official plugins are available:
+## Características principales
+- Visualización de productos
+- Agregar productos al carrito
+- Sistema de favoritos
+- Buscador de productos
+- Navbar interactivo
+- Diseño responsive con Material UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Interfaz gráfica
+La interfaz fue desarrollada con React y Material UI, mostrando tarjetas de productos con imágenes, precios y acciones como agregar al carrito o favoritos.
 
-## React Compiler
+## Arquitectura del Proyecto
+El proyecto está desarrollado con:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- React
+- React Router
+- Material UI
+- LocalStorage para almacenamiento temporal
 
-Note: This will impact Vite dev & build performances.
+Estructura principal:
+# Glow by Bloom
 
-## Expanding the ESLint configuration
+## Descripción
+Glow by Bloom es una aplicación web de tienda de maquillaje donde los usuarios pueden visualizar productos, agregarlos al carrito y guardarlos en favoritos.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Características principales
+- Visualización de productos
+- Agregar productos al carrito
+- Sistema de favoritos
+- Buscador de productos
+- Navbar interactivo
+- Diseño responsive con Material UI
+
+## Interfaz gráfica
+La interfaz fue desarrollada con React y Material UI, mostrando tarjetas de productos con imágenes, precios y acciones como agregar al carrito o favoritos.
+
+## Arquitectura del Proyecto
+El proyecto está desarrollado con:
+
+- React
+- React Router
+- Material UI
+- LocalStorage para almacenamiento temporal
+
+Estructura principal:
+src
+components
+Header.jsx
+Content.jsx
+pages
+Favorites.jsx
+Cart.jsx
+
+## Datos del Autor
+Nombre: Juliana Betancur  
+Proyecto: Glow by Bloom  
+Tecnologías: React, JavaScript, Material UI  
