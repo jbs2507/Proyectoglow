@@ -1,12 +1,6 @@
 {
-  "buildCommand": "npm run build",
-  "installCommand": "npm install",
+  "buildCommand": "npm install && npm run build",
   "outputDirectory": "dist",
-  "env": {
-    "NODE_ENV": "production",
-    "NPM_CONFIG_PRODUCTION": "false"
-  },
-
   "headers": [
     {
       "source": "/assets/(.*)",
