@@ -61,7 +61,7 @@ const articles = [
     title: "Laura Mercier Translucent Loose Setting Powder",
     price: "$200.000",
     image:
-      "https://www.beautyface.com.co/wp-content/uploads/2024/08/s2629772-main-zoom.webp",
+      "https://vanyla.co/wp-content/uploads/2026/01/s2588515-av-4-zoom.jpg",
   },
   {
     id: 4,
@@ -145,7 +145,7 @@ const articles = [
     title: "Huda Beauty Easy Bake Loose Powder Brightening + Correcting Duo",
     price: "$230.000",
     image:
-      "https://www.beautyface.com.co/wp-content/uploads/2025/10/s2904894-main-zoom.webp",
+      "https://thebeautyspotlb.com/gallery/images/products/1759925810Huda-beauty-new-easy-bake-duo-loose-powder.jpg",
   },
 ];
 
