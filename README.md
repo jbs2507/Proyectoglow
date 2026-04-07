@@ -1,36 +1,38 @@
-# Glow by gloom - React App
+# Glow by bloom - React App
 
 ## Descripción
-Es una aplicación web desarrollada con **React y Vite** que implementa una interfaz visual moderna para mostrar productos, datos o información relevante al contexto de este proyecto. La app utiliza rutas y componentes organizados para ofrecer una experiencia fluida entre secciones, y está pensada para ser desplegada fácilmente en **GitHub Pages** o cualquier otro servicio de hosting estático.
+Es una aplicación web desarrollada con **React y Vite** que permite visualizar productos o contenido destacado de manera organizada. La aplicación utiliza componentes reutilizables y rutas con React Router para ofrecer navegación fluida entre secciones.
 
 ## Características principales
-- Construida con **React** y organizada con componentes reutilizables.
-- Enrutamiento entre páginas usando **React Router** (`HashRouter` o BrowserRouter).
-- Estructura optimizada con **Vite** para desarrollo rápido y builds eficientes.
-- Listo para deploy en GitHub Pages o servicios similares.
-- Integración de CSS o frameworks de estilo (por ejemplo Bootstrap o Tailwind).
+- Navegación entre páginas con React Router.
+- Componentes reutilizables y organizados.
+- Interfaz responsiva para escritorio y dispositivos móviles.
+- Listo para build optimizado con Vite.
+- Deploy en Vercel para producción.
 
 ## Interfaz gráfica
-La interfaz presenta un diseño claro y moderno con una estructura de página central consistente. Al abrir la aplicación se muestra una vista principal con contenido destacado que puede incluir tarjetas, listados o secciones informativas según la funcionalidad del proyecto. Cada sección está organizada con componentes visuales que pueden incluir imágenes, texto y botones que facilitan la interacción del usuario. La navegación superior permite moverse entre diferentes vistas o secciones, y los estilos están pensados para que se adapten a distintos tamaños de pantalla, ofreciendo una experiencia responsive para escritorios y dispositivos móviles.
+La página principal muestra un **listado de productos o secciones destacadas**. Cada elemento presenta:  
+- **Imagen** del producto o contenido.  
+- **Nombre o título** del producto.  
+- **Precio o información relevante** si aplica.  
+
+El layout incluye un **Header** con navegación y título, un **Content** central con los elementos organizados en tarjetas, y un **Footer** con información adicional. Todo con un estilo limpio y moderno, adaptado a distintos tamaños de pantalla.
 
 ## Arquitectura del Proyecto
 Proyectoglow/
-├── public/ # Archivos estáticos públicos
-│ └── assets/ # Imágenes u otros recursos
+├── public/ # Archivos estáticos
+│ └── assets/ # Imágenes y recursos
 ├── src/
 │ ├── components/ # Componentes reutilizables
-│ │ ├── Header.jsx
-│ │ ├── Footer.jsx
-│ │ └── ...
-│ ├── pages/ # Vistas o pantallas principales
+│ ├── pages/ # Vistas principales
 │ ├── App.jsx # Componente raíz
-│ └── main.jsx # Punto de entrada para React
+│ └── main.jsx # Punto de entrada
 ├── package.json # Dependencias y scripts
 ├── vite.config.js # Configuración de Vite
-└── README.md # Documentación del proyecto
+└── README.md # Documentación
 
 ## Datos importantes del Autor
-Juliana Betancur  
+Juliana Betancur 
 - Desarrolladora Frontend  
 - Proyecto académico SENA — 2026  
-- Repositorio: https://github.com/jbs2507/Proyectoglow
+- Repositorio: [https://github.com/jbs2507/Proyectoglow](https://github.com/jbs2507/Proyectoglow)
