@@ -150,17 +150,26 @@ const articles = [
 ];
 
 /* ============================= */
+/*        INICIALIZADORES        */
+/* ============================= */
+
+const initializeFavorites = () => {
+  return JSON.parse(localStorage.getItem("favorites")) || [];
+};
+
+const initializeSearch = () => {
+  return localStorage.getItem("search") || "";
+};
+
+/* ============================= */
 /*          COMPONENTE           */
 /* ============================= */
 
 export const Article = () => {
-  const [favorites, setFavorites] = useState([]);
-  const [search, setSearch] = useState("");
+  const [favorites, setFavorites] = useState(initializeFavorites);
+  const [search, setSearch] = useState(initializeSearch);
 
   useEffect(() => {
-    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    setFavorites(savedFavorites);
-
     const updateSearch = () => {
       const newSearch = localStorage.getItem("search") || "";
       setSearch(newSearch);

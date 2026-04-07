@@ -13,7 +13,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import Lock from "@mui/icons-material/Lock";
-import { brown, pink, red } from "@mui/material/colors";
+import { pink } from "@mui/material/colors";
 
 export const Account = () => {
   const [email, setEmail] = useState("");
@@ -59,7 +59,7 @@ export const Account = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleLoginSubmit = (e) => {
     e.preventDefault();
 
     const emailError = validateEmail(email);
@@ -106,76 +106,78 @@ export const Account = () => {
           Cuenta de Usuario 
         </Typography>
 
-        <TextField
-          fullWidth
-          label="Correo"
-          margin="normal"
-          value={email}
-          onChange={handleEmailChange}
-          error={Boolean(errors.email)}
-          helperText={errors.email}
-          color={emailValid ? "success" : "primary"}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <AccountCircle
-                  color={
-                    emailValid ? "success" : errors.email ? "error" : "action"
-                  }
-                />
-              </InputAdornment>
-            ),
-          }}
-        />
+        <form onSubmit={handleLoginSubmit}>
+          <TextField
+            fullWidth
+            label="Correo"
+            margin="normal"
+            value={email}
+            onChange={handleEmailChange}
+            error={Boolean(errors.email)}
+            helperText={errors.email}
+            color={emailValid ? "success" : "primary"}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <AccountCircle
+                    color={
+                      emailValid ? "success" : errors.email ? "error" : "action"
+                    }
+                  />
+                </InputAdornment>
+              ),
+            }}
+          />
 
-        <TextField
-          fullWidth
-          label="Contraseña"
-          type={showPassword ? "text" : "password"}
-          margin="normal"
-          value={password}
-          onChange={handlePasswordChange}
-          error={Boolean(errors.password)}
-          helperText={errors.password}
-          color={passwordValid ? "success" : "primary"}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <Lock
-                  color={
-                    passwordValid
-                      ? "success"
-                      : errors.password
-                        ? "error"
-                        : "action"
-                  }
-                />
-              </InputAdornment>
-            ),
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton onClick={() => setShowPassword(!showPassword)}>
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-        />
+          <TextField
+            fullWidth
+            label="Contraseña"
+            type={showPassword ? "text" : "password"}
+            margin="normal"
+            value={password}
+            onChange={handlePasswordChange}
+            error={Boolean(errors.password)}
+            helperText={errors.password}
+            color={passwordValid ? "success" : "primary"}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <Lock
+                    color={
+                      passwordValid
+                        ? "success"
+                        : errors.password
+                          ? "error"
+                          : "action"
+                    }
+                  />
+                </InputAdornment>
+              ),
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton onClick={() => setShowPassword(!showPassword)}>
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
 
-        <Button
-          type="submit"
-          variant="contained"
-          fullWidth
-          sx={{
-            backgroundColor: pink[200],
-            mt: 3,
-            py: 1.2,
-            fontWeight: "bold",
-            borderRadius: 2,
-          }}
+          <Button
+            type="submit"
+            variant="contained"
+            fullWidth
+            sx={{
+              backgroundColor: pink[200],
+              mt: 3,
+              py: 1.2,
+              fontWeight: "bold",
+              borderRadius: 2,
+            }}
         >
           Iniciar sesión
         </Button>
+        </form>
       </Paper>
     </Box>
   );

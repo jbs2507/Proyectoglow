@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Box,
   Container,
@@ -18,14 +18,13 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 import { pink } from "@mui/material/colors";
 
+const initializeFavorites = () => {
+  return JSON.parse(localStorage.getItem("favorites")) || [];
+};
+
 export const Content = () => {
 
-  const [favorites, setFavorites] = useState([]);
-
-  useEffect(() => {
-    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    setFavorites(savedFavorites);
-  }, []);
+  const [favorites, setFavorites] = useState(initializeFavorites);
 
   /* AGREGAR AL CARRITO */
 

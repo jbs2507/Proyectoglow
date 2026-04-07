@@ -1,5 +1,5 @@
 import { pink } from "@mui/material/colors";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import {
   Typography
@@ -157,25 +157,18 @@ const articles = [
 ];
 
 
-export const Favorites = () => {
-
-  const [favorites, setFavorites] = useState([]);
-
-  useEffect(() => {
-
+const initializeFavorites = () => {
   const saved = JSON.parse(localStorage.getItem("favorites")) || [];
-
-  // favoritos guardados como objetos (Content)
   const contentFavorites = saved.filter((item) => typeof item === "object");
-
-  // favoritos guardados como ids (Articles)
   const articleFavorites = articles.filter((article) =>
     saved.includes(article.id)
   );
+  return [...articleFavorites, ...contentFavorites];
+};
 
-  setFavorites([...articleFavorites, ...contentFavorites]);
+export const Favorites = () => {
 
-}, []);
+  const [favorites] = useState(initializeFavorites);
 
   return (
     <div style={styles.container}>

@@ -1,24 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { pink } from "@mui/material/colors";
+
+const initializeCart = () => {
+  let savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+  return savedCart.map((item) => ({
+    ...item,
+    quantity: item.quantity || 1
+  }));
+};
+
+const calculateInitialTotal = (cartItems) => {
+  return cartItems.reduce((sum, item) => {
+    const price =
+      typeof item.price === "number"
+        ? item.price
+        : parseInt(item.price.replace(/\D/g, ""));
+    return sum + price * item.quantity;
+  }, 0);
+};
 
 export const Cart = () => {
 
-  const [cart, setCart] = useState([]);
-  const [total, setTotal] = useState(0);
-
-  useEffect(() => {
-
-    let savedCart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    savedCart = savedCart.map((item) => ({
+  const [cart, setCart] = useState(initializeCart);
+  const [total, setTotal] = useState(() => {
+    const initialCart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartWithQuantity = initialCart.map((item) => ({
       ...item,
       quantity: item.quantity || 1
     }));
-
-    setCart(savedCart);
-    calculateTotal(savedCart);
-
-  }, []);
+    return calculateInitialTotal(cartWithQuantity);
+  });
 
   const calculateTotal = (cartItems) => {
 
